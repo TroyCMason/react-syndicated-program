@@ -12,6 +12,9 @@ function App() {
      <Todo/>
      <Todo/>
      <Todo/>
+     <Todo />
+     <Todo />
+     <Todo />
      </div>
      </div>
   );
