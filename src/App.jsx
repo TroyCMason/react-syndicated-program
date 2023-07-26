@@ -5,18 +5,23 @@ import Title from './Components/Title.jsx'
 
 function App() {
   return (
-    <div>
+    <>
      <Title/>
      <div className='todo__wrapper'>
 
-     <Todo/>
-     <Todo/>
-     <Todo/>
-     <Todo />
-     <Todo />
-     <Todo />
+     <Todo title="Finish Frontend Simplified"
+     paragraph="Code along with Frontend Simplified"/>
+     <Todo title="Complete Interview Section"
+     paragraph="Finish every interview question"
+     />
+     <Todo title="Land a 100k a year job"
+     paragraph="Apply to 100 jobs"/>
+     <Todo title="Pay off Debt"/>
+     <Todo title="Pay off Taxes" />
+     <Todo title="Save my Family" />
      </div>
-     </div>
+     <Modal />
+     </>
   );
 }
 
