@@ -2,19 +2,21 @@ import logo from './logo.svg';
 import './App.css';
 import Todo from './Components/Todo.jsx'
 import Title from './Components/Title.jsx'
+import React, {useState} from 'react';
 
 function App() {
+ const [showModal, setShowModal] = useState(false)
+ setShowModal(false)
   return (
     <>
      <Title/>
+     <div>
+      <input type="text" onChange={(event)=>{
+      console.log(event.target.value)
+      }}/>
+        <button>Add todo</button>
+     </div>
      <div className='todo__wrapper'>
-      <div>
-        <input type="text"  onChange={(event) => {
-          console.log(event.target.value)
-        }}/>
-      </div>
-      <button>Add todo</button>
-
      <Todo title="Finish Frontend Simplified"
      paragraph="Code along with Frontend Simplified"/>
      <Todo title="Complete Interview Section"
@@ -26,10 +28,9 @@ function App() {
      <Todo title="Pay off Taxes" />
      <Todo title="Save my Family" />
      </div>
-     <Modal title="Are you sure?"/>
+     {false && <Modal title="Confirm Delete?"/>}
      </>
   );
 }
 
 export default App;
-pp

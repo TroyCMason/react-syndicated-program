@@ -1,13 +1,13 @@
 import './Todo.css'
 
-function Todo(title,paragraph) {
+function Todo(title,) {
 function deleteTodo() {
     console.log("deleteTodo()", id)
 }
 
     return (
         <div  ClassName="todo">
-      <h2>{title}</h2>
+      <p>{title}</p>
       <p>{paragraph}</p>
       <button onClick={() => deleteTodo}> Delete</button>
      </div>
