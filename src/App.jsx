@@ -20,7 +20,7 @@ function App() {
      <Todo title="Pay off Taxes" />
      <Todo title="Save my Family" />
      </div>
-     <Modal />
+     <Modal title="Are you sure?"/>
      </>
   );
 }
