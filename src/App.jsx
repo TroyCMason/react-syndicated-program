@@ -8,6 +8,12 @@ function App() {
     <>
      <Title/>
      <div className='todo__wrapper'>
+      <div>
+        <input type="text"  onChange={(event) => {
+          console.log(event.target.value)
+        }}/>
+      </div>
+      <button>Add todo</button>
 
      <Todo title="Finish Frontend Simplified"
      paragraph="Code along with Frontend Simplified"/>
