@@ -7,7 +7,7 @@ function Counter () {
  quantity: 0
    });
 
-function removeApplw () {
+function removeApple () {
     setCart((prevCart) => ({
         ...prevCart,
         quatity : prevCart.cart - 1
@@ -22,7 +22,7 @@ function removeApplw () {
    }
     return (
         <div>
-            <button onClick={()=>null}>-</button>
+            <button onClick={removeApple}>-</button>
             {cart.quatity}
             {cart.item}
             <button onClick={() => null}>+</button>
