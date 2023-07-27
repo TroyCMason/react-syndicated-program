@@ -1,21 +1,31 @@
 import React, { useState } from 'react';
+import './Counter.css'
 
 function Counter () {
-   const[counter, setCounter] = useState(0)
-    function incrementCounter () {
-        setCounter((prevCounter)=>prevCounter + 1 )
+   const[cart, setCart] = useState ({
+ item: " apple",
+ quantity: 0
+   });
 
-    }
+function removeApplw () {
+    setCart((prevCart) => ({
+        ...prevCart,
+        quatity : prevCart.cart - 1
+    }))
+}
 
-    function decrementCounter (){
-        setCounter((prevCounter) => prevCounter - 1)
-    }
-
+   function addApple(){
+    setCart(prevCart => ({
+        ...prevCart,
+        quantity: prevCart.quantity + 1,
+    }))
+   }
     return (
         <div>
-            <button onClicnk={decrementCounter}>+</button>
-            {counter}
-            <button onClick={incrementCounter}>-</button>
+            <button onClick={()=>null}>-</button>
+            {cart.quatity}
+            {cart.item}
+            <button onClick={() => null}>+</button>
         </div>
     ) 
 }
